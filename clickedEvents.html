@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Clicked Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header with Add Events Button -->
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-bold text-orange-500">🎯 My Clicked Events</h1>
+      <a href="./cards.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+       Add Events
+      </a>
+    </div>
+
+    <!-- Events Grid -->
+    <div id="clickedEventsWrapper" class="grid gap-6 md:grid-cols-2"></div>
+  </div>
+
+  <script type="module" src="./ClickedEvents.js"></script>
+</body>
+</html>

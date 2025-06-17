@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Planner - Create Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 text-gray-800">
+
+  <!-- Header -->
+  <header class="mb-8 text-center">
+    <h1 class="text-4xl font-bold text-orange-500">Create a New Event</h1>
+    <p class="text-gray-600 mt-2">Fill in the details to plan your next event</p>
+
+    <div class="max-w-4xl mx-auto mt-6 text-center">
+      <button 
+        onclick="location.href='./allClickedEvents.html'" 
+        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg transition">
+        📋 See All Tasks
+      </button>
+    </div>
+  </header>
+
+  <!-- New Event Form -->
+  <section class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md mb-10">
+    <form id="eventForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Event Name</label>
+        <input type="text" id="eventName" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Date</label>
+        <input type="date" id="eventDate" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Location</label>
+        <input type="text" id="eventLocation" class="w-full p-2 border rounded" required />
+      </div>
+      <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">Create Event</button>
+    </form>
+  </section>
+
+  <!-- Add Task Form -->
+  <section class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Add Task</h2>
+    <form id="taskForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Task Title</label>
+        <input type="text" id="taskTitle" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Assign To (Email)</label>
+        <input type="email" id="assignedTo" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Due Date</label>
+        <input type="date" id="taskDueDate" class="w-full p-2 border rounded" />
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Add Task</button>
+    </form>
+  </section>
+  
+
+  <!-- Add Expense Form -->
+  <section class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Add Expense</h2>
+    <form id="expenseForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Expense Title</label>
+        <input type="text" id="expenseTitle" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Amount</label>
+        <input type="number" id="expenseAmount" class="w-full p-2 border rounded" required />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Category</label>
+        <select id="expenseCategory" class="w-full p-2 border rounded">
+          <option>Venue</option>
+          <option>Catering</option>
+          <option>Decor</option>
+          <option>Transport</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Add Expense</button>
+    </form>
+  </section>
+
+  <!-- Event Dashboard -->
+  <section class="max-w-4xl mx-auto mt-10">
+    <h2 class="text-2xl font-bold text-gray-700 mb-4">Event Dashboard</h2>
+    <div id="dashboard" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+  </section>
+
+  <script type="module" src="./createEvent.js"></script>
+</body>
+</html>
