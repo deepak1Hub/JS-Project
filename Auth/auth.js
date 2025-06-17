@@ -49,7 +49,7 @@ window.login = async function () {
         window.location.href = "../Admin/allClickedEvents.html";
       } else {
         alert("User login successful");
-        window.location.href = "../cards.html";
+        window.location.href = "./cards.html";
       }
     } else {
       alert("User role not found, logging in as client");
